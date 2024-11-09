@@ -1,0 +1,180 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basic Styling */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    overflow: hidden;
+    flex-direction: column;
+}
+
+.container {
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 150px;
+}
+
+/* Circular Image */
+.image-circle {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 20px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    animation: float 6s ease-in-out infinite;
+}
+
+.image-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Headline and Subhead */
+h1.headline {
+    font-size: 3em;
+    letter-spacing: 1.5px;
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+p.subhead {
+    font-size: 1.2em;
+    margin: 10px 0 20px;
+    color: #ddd;
+    animation: fadeInUp 1.5s ease-out forwards;
+}
+
+/* Call-to-Action Button */
+a.cta-button {
+    display: inline-block;
+    padding: 12px 30px;
+    margin-top: 15px;
+    font-size: 1em;
+    color: #764ba2;
+    background-color: #fff;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+    animation: bounceIn 2s ease infinite;
+    transition: background 0.3s ease;
+}
+
+a.cta-button:hover {
+    background: #ffd700;
+}
+
+/* Circle Animation */
+.circle-animation {
+    position: absolute;
+    top: -200px;
+    right: -200px;
+    width: 400px;
+    height: 400px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+    animation: float 6s ease-in-out infinite;
+}
+
+/* Wave Animation */
+.wave-animation {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(135deg, #ffffff33, #ffffff11);
+    clip-path: polygon(0 100%, 50% 75%, 100% 100%, 100% 0, 0 0);
+    animation: wave 4s ease-in-out infinite;
+}
+
+/* Footer */
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 10px 0;
+    background: rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.footer-content p {
+    color: #ddd;
+    font-size: 0.9em;
+}
+
+.footer-content .social-icons a {
+    color: #ddd;
+    margin: 0 10px;
+    font-size: 1.2em;
+    transition: color 0.3s;
+}
+
+.footer-content .social-icons a:hover {
+    color: #ffd700;
+}
+
+/* Keyframes for animations */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounceIn {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(30px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes wave {
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(-10px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
