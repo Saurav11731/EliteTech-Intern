@@ -13,6 +13,64 @@
       padding: 0;
     }
 
+    /* Navbar */
+    .navbar {
+      background-color: #20c996aa;
+      padding: 10px 20px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .navbar-brand {
+      font-size: 24px;
+      font-weight: bold;
+      color: #fff;
+    }
+
+    .navbar-nav .nav-link {
+      color: #fff;
+      font-size: 18px;
+      margin-right: 15px;
+      transition: color 0.3s ease;
+    }
+
+    .navbar-nav .nav-link:hover {
+      color: #333;
+    }
+
+    .hero-section {
+      text-align: center;
+      padding: 100px 20px;
+      background: linear-gradient(to right, #20c996, #2ec4b6);
+      color: white;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    .hero-section h1 {
+      font-size: 50px;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+
+    .hero-section p {
+      font-size: 20px;
+      margin-bottom: 30px;
+    }
+
+    .btn-hero {
+      background-color: #fff;
+      color: #20c996;
+      padding: 10px 25px;
+      font-size: 18px;
+      border-radius: 5px;
+      transition: transform 0.3s ease;
+    }
+
+    .btn-hero:hover {
+      transform: scale(1.1);
+      background-color: #f4f4f4;
+    }
+
+    /* Portfolio Section */
     .portfolio-section {
       max-width: 800px;
       margin: 50px auto;
@@ -23,78 +81,60 @@
       box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
     }
 
-    .portfolio-section h1 {
-      font-size: 36px;
-      color: #333;
-      font-weight: 700;
-      margin-bottom: 20px;
-      animation: fadeIn 1s ease-in-out;
+    /* Projects Section */
+    .projects {
+      margin: 50px auto;
+      text-align: center;
+      background-color: #fff;
+      border-radius: 10px;
+      padding: 20px;
+      max-width: 800px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
     }
 
-    .portfolio-section p {
-      font-size: 18px;
-      color: #555;
-      line-height: 1.6;
-      margin-bottom: 20px;
-      animation: fadeIn 1.5s ease-in-out;
-    }
-
-    .profile-img {
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      overflow: hidden;
-      border: 4px solid #20c996aa;
-      margin: 0 auto 20px;
-      animation: fadeIn 1.2s ease-in-out;
-    }
-
-    .profile-img img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .skills {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      margin-top: 20px;
-    }
-
-    .skill-item {
+    .project-card {
       background-color: #20c996aa;
       color: #fff;
-      padding: 10px 15px;
-      margin: 5px;
-      border-radius: 20px;
-      font-weight: bold;
+      border-radius: 10px;
+      margin: 15px;
+      padding: 20px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
       transition: transform 0.3s ease;
-      animation: fadeIn 1.8s ease-in-out;
     }
 
-    .skill-item:hover {
-      transform: scale(1.1);
+    .project-card:hover {
+      transform: scale(1.05);
     }
 
-    .contact-info a {
-      color: #20c996aa;
-      text-decoration: none;
-      font-size: 20px;
-      margin: 0 15px;
-      transition: color 0.3s ease;
+    .project-card h4 {
+      font-size: 22px;
+      font-weight: bold;
     }
 
-    .contact-info a:hover {
-      color: #333;
+    .project-card p {
+      font-size: 16px;
+      line-height: 1.4;
     }
 
-    .resume-section {
-      margin-top: 40px;
-      text-align: center;
+    /* Contact Form */
+    .contact-form {
+      margin: 50px auto;
+      max-width: 800px;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
     }
 
-    .resume-btn {
+    .contact-form label {
+      font-weight: bold;
+    }
+
+    .contact-form .form-control {
+      margin-bottom: 15px;
+    }
+
+    .contact-form button {
       background-color: #20c996aa;
       color: #fff;
       border: none;
@@ -105,20 +145,31 @@
       transition: background-color 0.3s ease;
     }
 
-    .resume-btn:hover {
+    .contact-form button:hover {
       background-color: #20c996;
     }
 
-    .contact-form {
-      margin-top: 30px;
-      text-align: left;
+    /* Footer */
+    footer {
+      background-color: #20c996aa;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      margin-top: 50px;
     }
 
-    .contact-form input, .contact-form textarea {
-      margin-top: 10px;
-      margin-bottom: 15px;
+    footer a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 10px;
+      font-size: 18px;
     }
 
+    footer a:hover {
+      color: #333;
+    }
+
+    /* Animations */
     @keyframes fadeIn {
       from {
         opacity: 0;
@@ -133,65 +184,87 @@
 </head>
 <body>
 
-<div class="portfolio-section">
-  <h1>PORTFOLIO</h1>
-  
-  <!-- Profile image -->
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Saurav's Portfolio</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#projects">Projects</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#contact">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero-section">
+  <h1>Welcome to My Portfolio</h1>
+  <p>Hi! I'm Saurav, a passionate software developer. Let's build something amazing together.</p>
+  <a href="#projects" class="btn btn-hero">View My Work</a>
+</section>
+
+<!-- Portfolio Section -->
+<div id="about" class="portfolio-section">
+  <h1>About Me</h1>
   <div class="profile-img">
     <img src="Saurav.jpg" alt="Profile Picture">
   </div>
-  
-  <!-- Description -->
-   <h1>Saurav Kumar</h1>
-  <p>Hello, My name is Saurav. I am a software developer with a passion for creating innovative solutions.
-    Student of Dayalbagh Educational Institute, Agra.
-  </p>
-  
-  <!-- Skills section -->
-  <div class="skills">
-    <span class="skill-item">HTML</span>
-    <span class="skill-item">CSS</span>
-    <span class="skill-item">JavaScript</span>
-    <span class="skill-item">React</span>
-    <span class="skill-item">Bootstrap</span>
-  </div>
+  <h1>Saurav Kumar</h1>
+  <p>Student at Dayalbagh Educational Institute, Agra.<br>Focused on crafting clean and user-friendly web experiences.</p>
+  <a href="myCv.pdf" download="myCv.pdf" class="btn btn-hero mt-4">Download Resume</a>
+</div>
 
-  <!-- Resume Section -->
-  <div class="resume-section">
-    <h3 class="mt-4">Resume</h3>
-    <a href="myCv.pdf" download="myCv.pdf">
-      <button class="resume-btn">Download Resume</button>
-    </a>
-  </div>
-
-  <!-- Contact Section -->
-  <div class="contact-section mt-5">
-    <h3>Contact</h3>
-    <div class="contact-info mt-2">
-      <a href="mailto:sauravyadav552583@gmail.com">Email</a>
-      <a href="https://github.com/Saurav11731/EliteTech-Intern" target="_blank">GitHub</a>
-      <a href="https://linkedin.com/in/Saurav Yadav" target="_blank">LinkedIn</a>
+<!-- Projects Section -->
+<div id="projects" class="projects">
+  <h2>Projects</h2>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="project-card">
+        <h4>Blog Website</h4>
+        <p>A responsive blog website built with Bootstrap and JavaScript.</p>
+      </div>
     </div>
-    
-    <div class="contact-form mt-4">
-      <form>
-        <div class="mb-3">
-          <label for="name" class="form-label">Name</label>
-          <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
-        </div>
-        <div class="mb-3">
-          <label for="email" class="form-label">Email</label>
-          <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
-        </div>
-        <div class="mb-3">
-          <label for="message" class="form-label">Message</label>
-          <textarea class="form-control" id="message" rows="4" placeholder="Enter your message" required></textarea>
-        </div>
-        <button type="submit" class="btn btn-primary">Send Message</button>
-      </form>
+    <div class="col-md-6">
+      <div class="project-card">
+        <h4>Portfolio</h4>
+        <p>This portfolio site showcasing my skills and projects.</p>
+      </div>
     </div>
   </div>
 </div>
+
+<!-- Contact Section -->
+<div id="contact" class="contact-form">
+  <h3>Contact Me</h3>
+  <form>
+    <label for="name">Name</label>
+    <input type="text" id="name" class="form-control" placeholder="Your Name" required>
+
+    <label for="email">Email</label>
+    <input type="email" id="email" class="form-control" placeholder="Your Email" required>
+
+    <label for="message">Message</label>
+    <textarea id="message" class="form-control" rows="5" placeholder="Your Message" required></textarea>
+
+    <button type="submit" class="mt-3">Send Message</button>
+  </form>
+</div>
+
+<!-- Footer -->
+<footer>
+  <p>&copy; 2024 Saurav Kumar. Built with love.</p>
+</footer>
 
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>

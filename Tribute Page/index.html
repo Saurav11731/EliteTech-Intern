@@ -3,33 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tribute to [Person's Name]</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Tribute to Mahatma Gandhi</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>Tribute to [Person's Name]</h1>
+    <header class="header">
+        <h1 class="title">Tribute to Mahatma Gandhi</h1>
     </header>
 
-    <section id="intro">
-        <img src="person-image.jpg" alt="[Person's Name]" class="profile-img">
-        <p>[Person's Name] is someone who has made a lasting impact on my life. Here's why I admire them:</p>
-    </section>
+    <main class="main-content">
+        <!-- Introduction Section -->
+        <section id="intro" class="intro">
+            <img src="MG.jpg" 
+                alt="Mahatma Gandhi" class="profile-img">
+            <p class="intro-text">
+                Mahatma Gandhi, a pioneer of peace and non-violence, continues to inspire millions worldwide.
+            </p>
+        </section>
 
-    <section id="about">
-        <h2>About [Person's Name]</h2>
-        <p>[Person's Name] was born on [birthdate] and is known for [their achievements or qualities].</p>
-        <p>[More detailed information about their life, achievements, and impact].</p>
-    </section>
+        <!-- About Section -->
+        <section id="about" class="about">
+            <h2 class="section-title">About Mahatma Gandhi</h2>
+            <p>
+                Mahatma Gandhi, born on October 2, 1869, in Porbandar, India, was a leader of India's independence 
+                movement against British rule. Known as the "Father of the Nation," Gandhi's principles of 
+                non-violence and truth (Satyagraha) remain a guiding light for civil rights movements globally.
+            </p>
+            <p>
+                He led significant campaigns like the Salt March and advocated for religious harmony, social 
+                justice, and the upliftment of the underprivileged. Gandhi's legacy is a testament to the power 
+                of peaceful protest.
+            </p>
+        </section>
 
-    <section id="tribute">
-        <h2>Why I Admire [Person's Name]</h2>
-        <p>I admire [Person's Name] because of their [mention qualities like kindness, perseverance, innovation]. Their work has inspired me to [mention how their work or life has affected you].</p>
-    </section>
+        <!-- Tribute Section -->
+        <section id="tribute" class="tribute">
+            <h2 class="section-title">Why I Admire Mahatma Gandhi</h2>
+            <p>
+                I admire Mahatma Gandhi for his unwavering commitment to truth, non-violence, and justice. 
+                His courage to stand against oppression with peaceful resistance inspires me to pursue equality 
+                and harmony in my own life. His words, "Be the change you wish to see in the world," resonate deeply.
+            </p>
+        </section>
 
-    <footer>
-        <p>Created by [Your Name]</p>
+        <!-- Interactive Flower Section -->
+        <section id="pay-tribute" class="pay-tribute">
+            <h2 class="section-title">Pay Tribute to Mahatma Gandhi</h2>
+            <p>Click the checkbox below to offer flowers as a mark of respect.</p>
+            <div class="flower-container">
+                <input type="checkbox" id="offer-flower" class="flower-checkbox">
+                <label for="offer-flower" class="flower-label">🌸 Offer Flower</label>
+                <div class="flower-display">
+                    <span>🌸</span>
+                    <span>🌸</span>
+                    <span>🌸</span>
+                    <span>🌸</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>Created with admiration by [Your Name]</p>
     </footer>
 </body>
 </html>

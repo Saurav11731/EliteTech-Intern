@@ -1,108 +1,71 @@
-/* General Reset */
-* {
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
 }
 
 .container {
-    width: 400px;
-    background-color: #fff;
+    max-width: 800px;
+    margin: auto;
     padding: 20px;
-    border-radius: 8px;
+    border-radius: 10px;
+    background-color: #fff;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-h1 {
-    text-align: center;
-    font-size: 2em;
-    margin-bottom: 20px;
-}
-
-.add-task {
-    display: flex;
-    margin-bottom: 20px;
-}
-
-#task-input {
-    width: 80%;
-    padding: 10px;
-    font-size: 1em;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-#add-task-button {
-    width: 20%;
-    padding: 10px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-#add-task-button:hover {
-    background-color: #45a049;
-}
-
-.tasks-section {
-    margin-top: 20px;
-}
-
-h2 {
-    font-size: 1.5em;
-    margin-bottom: 10px;
-}
-
+/* Task List Styles */
 .tasks-list {
-    list-style: none;
     padding: 0;
+    margin: 0;
+    list-style: none;
+    margin-top: 10px;
 }
 
-.task-item {
+.tasks-list li {
+    margin: 5px 0;
+    padding: 10px 15px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #f9f9f9;
-    padding: 10px;
-    margin-bottom: 5px;
     border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: #e9ecef;
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
-button {
-    background-color: #f44336;
-    color: white;
+.tasks-list li:hover {
+    transform: scale(1.02);
+    background-color: #dee2e6;
+}
+
+/* Task Buttons */
+.complete-btn, .delete-btn {
     border: none;
-    padding: 5px 10px;
-    border-radius: 5px;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 16px;
+    width: 30px;
+    height: 30px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-button:hover {
-    background-color: #e53935;
+.complete-btn {
+    background-color: #28a745;
 }
 
-.completed {
-    text-decoration: line-through;
-    color: gray;
+.complete-btn:hover {
+    background-color: #218838;
 }
 
-.edit-button {
-    background-color: #ffa500;
+.delete-btn {
+    background-color: #dc3545;
 }
 
-.edit-button:hover {
-    background-color: #ff8c00;
+.delete-btn:hover {
+    background-color: #c82333;
 }

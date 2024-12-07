@@ -1,69 +1,119 @@
-/* General Reset */
-* {
+body {
+    background: linear-gradient(to bottom, #85d7ff, #ffffff);
+    font-family: 'Arial', sans-serif;
+    color: #333;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
 }
 
 .container {
-    width: 400px;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 700px;
+    margin: 50px auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
 
 h1 {
+    font-size: 36px;
     margin-bottom: 20px;
-    font-size: 1.8em;
+    font-weight: bold;
+    color: #007bff;
+    animation: fadeIn 1.2s ease;
 }
 
 .input-section {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+    margin-bottom: 30px;
 }
 
-#temperature-input {
+.input-section input, .input-section select {
     padding: 10px;
-    font-size: 1em;
-    border: 1px solid #ccc;
+    font-size: 18px;
+    margin: 10px;
+    border: 2px solid #ddd;
     border-radius: 5px;
+    width: calc(100% - 22px);
+    max-width: 300px;
 }
 
-#unit-select {
-    padding: 10px;
-    font-size: 1em;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-#convert-button {
-    padding: 10px;
-    background-color: #4CAF50;
-    color: white;
+.input-section button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 18px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-#convert-button:hover {
-    background-color: #45a049;
+.input-section button:hover {
+    background-color: #0056b3;
 }
 
 .output-section {
     margin-top: 20px;
-    font-size: 1.2em;
-    font-weight: bold;
+    font-size: 20px;
     color: #333;
+    animation: fadeIn 1.5s ease;
+}
+
+.output-section p {
+    font-weight: bold;
+}
+
+.advanced-options {
+    margin-top: 30px;
+    text-align: left;
+}
+
+.advanced-options h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #007bff;
+}
+
+.advanced-options ul {
+    list-style: none;
+    padding: 0;
+}
+
+.advanced-options li {
+    background: #f9f9f9;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Adding animated temperature image */
+.animated-image {
+    margin: 30px auto;
+}
+
+.animated-image img {
+    width: 100px;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
 }

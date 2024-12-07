@@ -1,32 +1,44 @@
-document.getElementById("convert-button").addEventListener("click", function() {
-    const temperatureInput = document.getElementById("temperature-input").value;
-    const unit = document.getElementById("unit-select").value;
-    const resultElement = document.getElementById("result");
+// JavaScript for Conversion Logic
+const convertButton = document.getElementById('convert-button');
+const temperatureInput = document.getElementById('temperature-input');
+const unitSelect = document.getElementById('unit-select');
+const result = document.getElementById('result');
 
-    if (temperatureInput === "" || isNaN(temperatureInput)) {
-        resultElement.textContent = "Please enter a valid number!";
+convertButton.addEventListener('click', () => {
+    const tempValue = parseFloat(temperatureInput.value);
+    const unit = unitSelect.value;
+
+    if (isNaN(tempValue)) {
+        result.textContent = "Please enter a valid temperature.";
         return;
     }
 
-    let convertedTemperature;
+    let celsius, fahrenheit, kelvin;
 
-    if (unit === "Celsius") {
-        convertedTemperature = {
-            Fahrenheit: (temperatureInput * 9/5) + 32,
-            Kelvin: parseFloat(temperatureInput) + 273.15
-        };
-        resultElement.textContent = `${temperatureInput}°C = ${convertedTemperature.Fahrenheit.toFixed(2)}°F = ${convertedTemperature.Kelvin.toFixed(2)} K`;
-    } else if (unit === "Fahrenheit") {
-        convertedTemperature = {
-            Celsius: (temperatureInput - 32) * 5/9,
-            Kelvin: ((temperatureInput - 32) * 5/9) + 273.15
-        };
-        resultElement.textContent = `${temperatureInput}°F = ${convertedTemperature.Celsius.toFixed(2)}°C = ${convertedTemperature.Kelvin.toFixed(2)} K`;
-    } else if (unit === "Kelvin") {
-        convertedTemperature = {
-            Celsius: temperatureInput - 273.15,
-            Fahrenheit: ((temperatureInput - 273.15) * 9/5) + 32
-        };
-        resultElement.textContent = `${temperatureInput} K = ${convertedTemperature.Celsius.toFixed(2)}°C = ${convertedTemperature.Fahrenheit.toFixed(2)}°F`;
+    switch (unit) {
+        case "Celsius":
+            celsius = tempValue;
+            fahrenheit = (tempValue * 9/5) + 32;
+            kelvin = tempValue + 273.15;
+            break;
+        case "Fahrenheit":
+            celsius = (tempValue - 32) * 5/9;
+            fahrenheit = tempValue;
+            kelvin = celsius + 273.15;
+            break;
+        case "Kelvin":
+            celsius = tempValue - 273.15;
+            fahrenheit = (celsius * 9/5) + 32;
+            kelvin = tempValue;
+            break;
     }
+
+    result.innerHTML = `
+        <strong>${tempValue}° ${unit}</strong> is equivalent to:
+        <ul>
+            <li>${celsius.toFixed(2)}° Celsius</li>
+            <li>${fahrenheit.toFixed(2)}° Fahrenheit</li>
+            <li>${kelvin.toFixed(2)}° Kelvin</li>
+        </ul>
+    `;
 });
