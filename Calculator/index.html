@@ -3,30 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Calculator</title>
+    <title>Advanced Calculator</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="calculator">
-        <input type="text" id="display" disabled> <!-- Display Screen -->
+        <input type="text" id="display" placeholder="0" disabled>
         <div class="buttons">
             <button class="button" id="clear">C</button>
-            <button class="button">7</button>
-            <button class="button">8</button>
-            <button class="button">9</button>
-            <button class="button">/</button>
-            <button class="button">4</button>
-            <button class="button">5</button>
-            <button class="button">6</button>
-            <button class="button">*</button>
-            <button class="button">1</button>
-            <button class="button">2</button>
-            <button class="button">3</button>
-            <button class="button">-</button>
-            <button class="button">0</button>
-            <button class="button">.</button>
-            <button class="button">+</button>
-            <button class="button" id="equals">=</button>
+            <button class="button trig" id="sin">sin</button>
+            <button class="button trig" id="cos">cos</button>
+            <button class="button trig" id="tan">tan</button>
+            <button class="button digit">7</button>
+            <button class="button digit">8</button>
+            <button class="button digit">9</button>
+            <button class="button operator">/</button>
+            <button class="button digit">4</button>
+            <button class="button digit">5</button>
+            <button class="button digit">6</button>
+            <button class="button operator">*</button>
+            <button class="button digit">1</button>
+            <button class="button digit">2</button>
+            <button class="button digit">3</button>
+            <button class="button operator">-</button>
+            <button class="button digit">0</button>
+            <button class="button dot">.</button>
+            <button class="button backspace" id="backspace">←</button>
+            <button class="button operator">+</button>
+            <button class="button equals" id="equals">=</button>
+            <button class="button sqrt" id="sqrt">√</button>
+            <button class="button cbrt" id="cbrt">∛</button>
+
         </div>
     </div>
     <script src="script.js"></script>
